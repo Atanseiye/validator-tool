@@ -4,6 +4,7 @@ import shutil
 import subprocess
 import os
 import json
+import sys
 from pathlib import Path
 
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
@@ -107,7 +108,7 @@ def main(username):
         batch_number = read_batch_number()
         try:
             subprocess.run(
-                ["python", "data/process.py", "--batch_number", str(batch_number), "--username", username],
+                [sys.executable, "data/process.py", "--batch_number", str(batch_number), "--username", username],
                 check=True
             )
             write_task(username, batch_number)
@@ -211,7 +212,7 @@ def main(username):
 
             try:
                 subprocess.run(
-                    ["python", "data/process.py", "--batch_number", str(batch_number), "--username", username],
+                    [sys.executable, "data/process.py", "--batch_number", str(batch_number), "--username", username],
                     check=True
                 )
                 st.success(f"Fetched batch {batch_number} for {username}")
