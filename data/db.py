@@ -10,6 +10,8 @@ import sys
 def push_data(data, collection, batch_size): 
     print('Connecting to database...')
 
+    config = st.secrets["database"]
+
     # Connect to MongoDB
     client = MongoClient(config['client'])
 
