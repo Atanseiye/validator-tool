@@ -1,5 +1,6 @@
 # Ignore the client secrets file
 client_secrets.json
+client_secret_299266385429-giim1jcsp915grc5s8i11e6i5sr64mps.apps.googleusercontent.com.json
 .devcontainer/
 # Ignore the local configuration file
 .streamlit/secrets.toml

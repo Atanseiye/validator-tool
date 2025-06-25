@@ -11,6 +11,7 @@ import os
 client_config = {
     "installed": {
         "client_id": st.secrets["google_drive"]["client_id"],
+        "project_id":"my-app-463810",
         "client_secret": st.secrets["google_drive"]["client_secret"],
         "redirect_uris": ["https://nkenne-validator-tool-main-hhk3wc.streamlit.app/"],
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
