@@ -2,3 +2,4 @@
 client_secrets.json
 .devcontainer/
 # Ignore the local configuration file
+.streamlit/secrets.toml
