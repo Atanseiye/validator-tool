@@ -18,7 +18,7 @@ client_config = {
 }
 
 # Save temporary client_secrets.json
-with open("client_secrets.json", "w") as f:
+with open("../client_secrets.json", "w") as f:
     json.dump(client_config, f)
 
 # --- AUTHENTICATE ONCE GLOBALLY ---
