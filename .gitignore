@@ -1,2 +1,4 @@
 # Ignore the client secrets file
 client_secrets.json
+.devcontainer/
+# Ignore the local configuration file
