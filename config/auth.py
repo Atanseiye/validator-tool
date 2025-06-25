@@ -26,15 +26,15 @@ client_config = {
 
 # Resolve the path one directory backwards
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-client_secrets_path = os.path.join(parent_dir, "client_secrets.json")
+client_secrets_path = os.path.join(parent_dir, "service_account.json")
 
 
 # Write the temporary client_secrets.json
-with open(client_secrets_path, "w") as f:
-    json.dump(client_config, f)
+# with open(client_secrets_path, "w") as f:
+#     json.dump(client_config, f)
 
 # Save service account JSON from Streamlit secrets
-with open("service_account.json", "w") as f:
+with open(client_secrets_path, "w") as f:
     f.write(st.secrets["service_account_json"])
 
 # --- AUTHENTICATE ONCE GLOBALLY ---
