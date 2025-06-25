@@ -33,6 +33,10 @@ client_secrets_path = os.path.join(parent_dir, "client_secrets.json")
 with open(client_secrets_path, "w") as f:
     json.dump(client_config, f)
 
+# Save service account JSON from Streamlit secrets
+with open("service_account.json", "w") as f:
+    f.write(st.secrets["service_account_json"])
+
 # --- AUTHENTICATE ONCE GLOBALLY ---
 # ga = GoogleAuth()
 # ga.LocalWebserverAuth()
