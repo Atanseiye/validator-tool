@@ -1,6 +1,9 @@
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
+from google_auth_oauthlib.flow import Flow
 from pathlib import Path
+from pydrive2.auth import GoogleAuth
+from pydrive2.drive import GoogleDrive
 import streamlit as st
 import json
 import os
@@ -31,9 +34,10 @@ with open(client_secrets_path, "w") as f:
     json.dump(client_config, f)
 
 # --- AUTHENTICATE ONCE GLOBALLY ---
+# ga = GoogleAuth()
 ga = GoogleAuth()
-ga.LocalWebserverAuth()
-drive = GoogleDrive(ga)
+ga.settings['client_config_file'] = client_secrets_path
+ga.ServiceAuth()  # Use service account authentication
 
 # --- UTILITIES ---
 def get_or_create_drive_folder(folder_name, parent_id=None):
