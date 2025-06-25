@@ -1,6 +1,25 @@
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 from pathlib import Path
+import streamlit as st
+import json
+
+
+# Prepare client secrets dynamically
+client_config = {
+    "installed": {
+        "client_id": st.secrets["google_drive"]["client_id"],
+        "client_secret": st.secrets["google_drive"]["client_secret"],
+        "redirect_uris": ["http://localhost:8080/"],
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "redirect_uris":["http://localhost"]
+    }
+}
+
+# Save temporary client_secrets.json
+with open("client_secrets.json", "w") as f:
+    json.dump(client_config, f)
 
 # --- AUTHENTICATE ONCE GLOBALLY ---
 ga = GoogleAuth()
