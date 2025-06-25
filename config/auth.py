@@ -9,7 +9,7 @@ import os
 # Prepare client secrets dynamically
 # Dynamically build client_secrets.json content from Streamlit secrets
 client_config = {
-    "installed": {
+    "web": {
         "client_id": st.secrets["google_drive"]["client_id"],
         "project_id":"my-app-463810",
         "client_secret": st.secrets["google_drive"]["client_secret"],
