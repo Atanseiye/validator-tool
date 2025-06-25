@@ -12,7 +12,7 @@ client_config = {
     "installed": {
         "client_id": st.secrets["google_drive"]["client_id"],
         "client_secret": st.secrets["google_drive"]["client_secret"],
-        "redirect_uris": ["http://localhost:8080/"],
+        "redirect_uris": ["https://nkenne-validator-tool-main-hhk3wc.streamlit.app/"],
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
         "token_uri": "https://oauth2.googleapis.com/token"
         
