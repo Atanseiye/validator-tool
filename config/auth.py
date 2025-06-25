@@ -35,9 +35,13 @@ with open(client_secrets_path, "w") as f:
 
 # --- AUTHENTICATE ONCE GLOBALLY ---
 # ga = GoogleAuth()
+# ga.LocalWebserverAuth()
+# drive = GoogleDrive(ga)
+
 ga = GoogleAuth()
-ga.settings['client_config_file'] = client_secrets_path
+ga.settings['client_config_file'] = "service_account.json"
 ga.ServiceAuth()  # Use service account authentication
+drive = GoogleDrive(ga)
 
 # --- UTILITIES ---
 def get_or_create_drive_folder(folder_name, parent_id=None):
