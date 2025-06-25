@@ -119,7 +119,7 @@ with tabs[2]:
         if st.button("Login as Admin"):
             if admin_username == "admin" and hash_password(admin_password) == users.get("admin", ""):
                 st.session_state.admin_logged_in = True
-                st.success("Admin logged in!")
+                # st.success("Admin logged in!")
             else:
                 st.error("Invalid admin credentials.")
 
