@@ -39,7 +39,7 @@ with open(client_secrets_path, "w") as f:
 # drive = GoogleDrive(ga)
 
 ga = GoogleAuth()
-ga.settings['client_config_file'] = client_secrets_path
+# ga.settings['client_config_file'] = client_secrets_path
 ga.ServiceAuth()  # Use service account authentication
 drive = GoogleDrive(ga)
 
