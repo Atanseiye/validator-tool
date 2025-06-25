@@ -4,3 +4,4 @@ client_secret_299266385429-giim1jcsp915grc5s8i11e6i5sr64mps.apps.googleuserconte
 .devcontainer/
 # Ignore the local configuration file
 .streamlit/secrets.toml
+service_account.json
